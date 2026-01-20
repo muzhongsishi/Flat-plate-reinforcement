@@ -93,7 +93,8 @@ const Plate = ({ config, showEdges }) => {
 
 const Stiffener = ({ type, config, plateLength, showEdges }) => {
     const { offset, color, ...dims } = config
-    const actualLength = Math.max(1, plateLength - offset * 2)
+    // Force stiffener length to be exactly the same as plate length, ignoring offset logic
+    const actualLength = plateLength
 
     const extrudeSettings = useMemo(() => ({
         depth: actualLength,

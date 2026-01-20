@@ -216,14 +216,7 @@ const Controls = ({
 
                 {renderStiffenerInputs()}
 
-                <InputRow label="两端留白 (Offset)">
-                    <Slider
-                        value={stiffenerConfig.offset}
-                        min={0}
-                        max={plateConfig.length / 2 - 5}
-                        onChange={v => updateStiffener('offset', v)}
-                    />
-                </InputRow>
+
 
                 <InputRow label="筋条颜色">
                     <ColorPicker value={stiffenerConfig.color} onChange={v => updateStiffener('color', v)} />
